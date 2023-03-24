@@ -1,0 +1,198 @@
+<!-- практика JS ...5705-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>    
+</head>
+
+<body>
+    <script>
+         /*1*/
+         x = +prompt("Введите число");  /*перевели в число*/
+        
+         if (x > 0)
+         {
+             alert(x + " - положительное");
+         }
+         else
+         {
+             if (x < 0)
+             {
+                 alert(x + " - отрицательное");
+             }
+                
+             else
+             {
+                 alert(x + " - ноль");          
+             }
+         }
+            
+         /*2*/
+         x = +prompt("Введите ваш возраст");
+        
+         if (x > 0 && x < 120) {
+             alert("Данные корректны");
+         }  
+         else {
+             alert("Данные некорректны");
+         }
+
+         /*3*/
+
+         x = +prompt("Введите число");
+        
+         if (x >= 0) {
+             alert("|" + x + "| = " + x);    
+         }
+         else {
+             x1 = x * (-1);
+             alert("|" + x + "| = " + x1);  
+         }
+
+         /*4*/
+         h = +prompt("Введите часы:");
+         m = +prompt("Введите минуты:");
+         s = +prompt("Введите секунды:");
+
+         if (h >=0 && h < 24) {
+             if (m >= 0 && m < 60) {
+                 if (s >= 0 && s < 60) {
+                     alert("Время: " + h + ":" + m + ":" + s + " - введено корректно");
+                 }
+                 else {
+                     alert("секунды = " + s + " некорректны");    
+                 }
+             }
+             else {
+                 alert("минуты = " + m + " некорректны");
+             }
+         }
+         else {
+             alert("часы = " + h + " некорректны");
+         }
+
+         /*5*/
+         x = +prompt("Введите X");
+         y = +prompt("Введите Y");
+
+         if (x > 0 && y > 0) {
+             alert("Первая четверть");
+         } else if (x < 0 && y > 0) {
+             alert("Вторая четверть");
+         } else if (x < 0 && y < 0) {                         alert("Третья четверть");
+         } else if (x > 0 && y < 0) {
+             alert("Четвертая четверть");
+         } else if (x == 0 && y != 0) {
+             alert("Точка лежит на оси Y");
+         } else if (y == 0 && x != 0) {
+             alert("Точка лежит на оси X");
+         } else {
+             alert("Точка лежит  в начале координат");
+         }
+
+         /*6*/
+         m = +prompt("Введите номер месяца");   
+        
+         switch (m) {
+             case 1:
+                 nameM = "Январь";
+                 break;
+             case 2:
+                 nameM = "Февраль";
+                 break;
+             case 3:
+                 nameM = "Март";
+                 break;
+             case 4:
+                 nameM = "Апрель";
+                 break;
+             case 5:
+                 nameM = "Май";
+                 break;
+             case 6:
+                 nameM = "Июнь";
+                 break;
+             case 7:
+                 nameM = "Июль";
+                 break;
+             case 8:
+                 nameM = "Август";
+                 break;
+             case 9:
+                 nameM = "Сентябрь";
+                 break;
+             case 10:
+                 nameM = "Октябрь";
+                 break;
+             case 11:
+                 nameM = "Ноябрь";
+                 break;
+             case 12:
+                 nameM = "Декабрь";
+                 break;
+             default:
+                 nameM = "указан неверно";
+         }
+         alert("Месяц - " + nameM);
+
+         /*7*/
+         x = +prompt("Ведите число 1");
+         y = +prompt("Ведите число 2");
+         znak = prompt("Введите знак + - * /");
+
+         switch (znak) {
+             case "+":
+                 res = x + y;
+                 alert(x + " + " + y + " = " + res);
+                 break;
+             case "-":
+                 res = x - y;
+                 alert(x + " - " + y + " = " + res);
+                 break;
+             case "*":
+                 res = x * y;
+                 alert(x + " * " + y + " = " + res);
+                 break;
+             case "/":
+                 res = x / y;
+                 alert(x + " / " + y + " = " + res);
+                 break;
+             default:
+                 alert("Данные некорректны");           
+         }      
+        
+        /*8*/
+        x1 = +prompt("Введите число 1");
+        x2 = +prompt("Введите число 2");
+
+        x1 > x2 ? (
+            alert("Большее число = " + x1)
+        ) : (
+            x1 == x2 ? (
+                alert("Числа равны")
+            ) : (
+                alert("Большее число = " + x2)
+            )            
+        );
+
+         /*9*/
+         x = +prompt("Введите число");
+        
+         (x % 5 == 0) ? (
+             alert(x + " кратно 5")
+         ) : (
+             alert(x + " некратно 5")
+         );
+
+         /*10*/
+         n = prompt("Введите название планеты");
+
+         (n == "Земля" || n == "земля") ? (
+             alert("Привет, землянин!")
+         ) : (
+             alert("Привет, инопланетянин!")
+         );
+
+    </script>
+</body>
